@@ -1,7 +1,7 @@
 resource "google_compute_network" "app" {
   name                    = "app-network"
   auto_create_subnetworks = false
-
+}
 
 resource "google_compute_subnetwork" "app" {
   name          = "app-subnet"
