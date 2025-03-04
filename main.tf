@@ -9,7 +9,7 @@ resource "google_compute_subnetwork" "app" {
   region        = "us-west1-a"
   network       = google_compute_network.custom-test.id
   }
-}
+
 
 data "google_compute_image" "ubuntu" {
   most_recent = true
@@ -20,7 +20,7 @@ data "google_compute_image" "ubuntu" {
 resource "google_compute_instance" "web" {
   name         = "web"
   machine_type = "e2-micro"
-
+}
   
   boot_disk {
     initialize_params {
