@@ -1,10 +1,10 @@
 resource "google_compute_network" "app" {
-  name                    = "app"
+  name                    = "app-network"
   auto_create_subnetworks = false
 
 
 resource "google_compute_subnetwork" "app" {
-  name          = "app"
+  name          = "app-subnet"
   ip_cidr_range = "10.2.0.0/16"
   region        = "us-west1-a"
   network       = google_compute_network.custom-test.id
